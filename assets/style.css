@@ -1,1 +1,27 @@
+/* KLCC corporate background */
+body{
+  background-image: url('assets/bg-klcc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
 
+/* overlay gelap + gradient supaya nampak professional & text jelas */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 700px at 18% 30%, rgba(2,6,23,0.25), rgba(2,6,23,0.70)),
+    linear-gradient(135deg, rgba(2,6,23,0.70), rgba(2,6,23,0.35));
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* panel content macam corporate glass */
+main > section{
+  background: rgba(248, 250, 252, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 2.25rem;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.18);
